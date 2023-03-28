@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>My First Web Page</title>
+        <script>
+            function hello(){
+                alert("Hello World!");
+            }
+
+            function fibonacciPyramid(numRows) {
+                var pyramid = [];
+                for (var i = 0; i < numRows; i++) {
+                    pyramid[i] = [];
+                    for (var j = 0; j <= i; j++) {
+                        if (j === 0 || j === i) {
+                            pyramid[i][j] = 1;
+                        } else {
+                            pyramid[i][j] = pyramid[i-1][j-1] + pyramid[i-1][j];
+                        }
+                    }
+                }
+                return pyramid;
+            }
+
+            function printPyramid(pyramid) {
+                var py = "";
+                for (var i = 0; i < pyramid.length; i++) {
+                    py+=(pyramid[i].join(' '));
+                    py+="\n";
+                }
+                alert(py);
+            }
+
+            // 실행
+            var pyramid = fibonacciPyramid(5); // 5줄짜리 피보나치 피라미드
+            //printPyramid(pyramid); // 콘솔에 출력
+
+            // // 구구단 2단부터 9단까지 출력하는 함수
+            // function printMultiplicationTable() {
+            //     for (var i = 2; i <= 9; i++) {
+            //         document.write(`<h2>${i}단</h2>`);
+            //         for (var j = 1; j <= 9; j++) {
+            //         document.write(`${i} x ${j} = ${i*j}<br>`);
+            //         }
+            //         document.write('<br>'); // 한 줄 띄우기
+            //     }
+            // }
+            // // 실행
+            // printMultiplicationTable();
+        </script>
+    </head>
+
+    <body>
+        <h1 id="title">My First Web Page</h1>
+        <p>My first paragraph.</p>
+        <button onClick="printPyramid(pyramid)">Click Me!</button>
+    </body>
+</html>
