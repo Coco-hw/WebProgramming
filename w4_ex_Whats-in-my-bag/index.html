@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>What's in my bag?</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>What's in my bag?</h2>
+        <p>Add items you pack in your bag, and check if you lost anything!</p>
+        <div class="main">
+            <input type="text" id="item" placeholder="Add an item...">
+            <button onclick="addItem()">Pack!</button>
+            <ul id="list"></ul>
+            <hr>
+        </div>
+        
+        <div class="container">
+            <h3>Recommended Items</h3>
+            <ul id="recommendations">
+                <li>핸드폰<button onclick="addRecommendation('핸드폰')">pack!</button></li>
+                <li>지갑<button onclick="addRecommendation('지갑')">pack!</button></li>
+                <li>보조배터리<button onclick="addRecommendation('보조배터리')">pack!</button></li>
+                <li>노트북<button onclick="addRecommendation('노트북')">pack!</button></li>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

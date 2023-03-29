@@ -1,0 +1,30 @@
+#list button {
+    float: right;
+}
+
+#recommendations button {
+    float: right;
+}
+
+.checked {
+    background-color: #ffffcc; /* 노란색 */
+    /* text-decoration: line-through; 가운데 줄 */
+}
+
+input[type=checkbox]:checked + label {
+    background-color: #ffffcc; /* 노란색 */
+    /* text-decoration: line-through; 가운데 줄 */
+}
+
+.main {
+    float: left;
+    width: 500px;
+    height: 100%;
+}
+
+.container {
+    float: left;
+    margin-left: 10px;
+    border: 1px solid black;
+    padding: 15px;
+}
