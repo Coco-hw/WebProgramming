@@ -45,6 +45,7 @@ const todoList = {
         const items = localStorage.getItem("todoList");
         if (items) {
             JSON.parse(items).forEach(pre_item => {
+                // TodoItem 객체로 변환하여 items 리스트에 추가
                 const item = new TodoItem(pre_item.title, pre_item.dueDate);
                 item.completed = pre_item.completed;
                 this.items.push(item);
