@@ -44,7 +44,11 @@ const todoList = {
     load() {
         const items = localStorage.getItem("todoList");
         if (items) {
-            this.items = JSON.parse(items);
+            JSON.parse(items).forEach(pre_item => {
+                const item = new TodoItem(pre_item.title, pre_item.dueDate);
+                item.completed = pre_item.completed;
+                this.items.push(item);
+            });
         }
     },
 };
