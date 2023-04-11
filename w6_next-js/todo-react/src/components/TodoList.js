@@ -66,6 +66,7 @@ const TodoList = () => {
                 type="text"
                 className={styles.itemInput}
                 value={input}
+                placeholder="Tell me what to do!"
                 onChange={(e) => setInput(e.target.value)}
             />
             {/* 종료일자를 입력받는 텍스트 필드입니다. */}

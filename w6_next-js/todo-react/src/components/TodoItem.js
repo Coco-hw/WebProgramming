@@ -22,7 +22,7 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
                 className={styles.todoText}
                 style={{ textDecoration: todo.completed ? "line-through" : "none" }}
             >
-                {todo.text}  
+                {todo.text}
             </span>
             <span
                 className={styles.dueText}
@@ -31,7 +31,7 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
                 {
                     todo.due!==""
                     ? <span className={styles.dueText}>📅 {todo.due}</span>
-                    : null
+                    : <span className={styles.dueText}></span>
                 }
             </span>
 
